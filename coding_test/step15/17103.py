@@ -3,6 +3,7 @@
 import sys
 import math
 
+
 MaxLimit = 1000000
 isPrime = [True] * (MaxLimit + 1)
 isPrime[0] = isPrime[1] = False
@@ -12,7 +13,8 @@ for i in range(2, int(math.sqrt(MaxLimit)) + 1):
   if isPrime[i]:
     for j in range(i*i,MaxLimit+1,i):
       isPrime[j] = False
-
+      
+input = sys.stdin.readline
 T = int(input())
 
 for _ in range(T):
