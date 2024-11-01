@@ -1,5 +1,6 @@
 #인사성 밝은 곰곰이(귀여웡)
-
+import sys
+input = sys.stdin.readline
 N = int(input())
 count = 0
 users = set()
