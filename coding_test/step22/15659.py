@@ -4,14 +4,16 @@
 
 # for sequence in permutations(range(1, N + 1), M):
 #     print(" ".join(map(str, sequence)))
-def backtrack(sequence):
-    while len(sequence) == M:
-        print(" ".join(map(str, sequence)))
-        break
+def back(num):
+  while len(num) == M:
+    print(*num)
+    break
 
-    for i in range(1, N + 1):
-        if i not in sequence:  # 중복 방지
-            backtrack(sequence + [i])
+  for i in range(1, N+1):
+    if i not in num:
+      back(num + [i])
 
-N, M = map(int, input().split())
-backtrack([])
+
+
+N, M = map(int,(input().split()))
+back([])
